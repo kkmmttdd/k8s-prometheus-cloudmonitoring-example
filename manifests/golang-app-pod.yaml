@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    labelName: golang-app
+  name: golang-app
+  namespace: app
+spec:
+  containers:
+  - image: golang
+    name: pods

@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta8
+kind: Config
+metadata:
+  name: k-s-prometheus-cloudmonitoring-example
+build:
+  artifacts:
+  - image: ${YOUR_CONTAINER_IMAGE}
+deploy:
+  kubectl:
+    manifests:
+    - manifests/*.yaml
