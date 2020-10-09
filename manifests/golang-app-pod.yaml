@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    labelName: golang-app
+    app: golang-app
   name: golang-app
   namespace: app
 spec:
