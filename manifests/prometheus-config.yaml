@@ -7,8 +7,14 @@ metadata:
   namespace: app
 data:
   prometheus.rules: |-
-#    groups:
-#      rules:
+    groups:
+    - name: golang
+      rules:
+      - record: responseAvg
+        expr: avg without (path) ( rate(go_app_response_latency_seconds_sum[5m])) / avg without (path) ( rate(go_app_response_latency_seconds_count[5m]))
+      - alert: responseTooLate
+        expr: responseAvg > 1
+
   prometheus.yml: |-
     global:
       scrape_interval: 60s
