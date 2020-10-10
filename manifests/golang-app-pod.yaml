@@ -7,5 +7,5 @@ metadata:
   namespace: app
 spec:
   containers:
-  - image: golang
-    name: pods
+  - image: ${YOUR_CONTENT_IMAGE}
+    name: main
