@@ -7,5 +7,5 @@ metadata:
   namespace: app
 spec:
   containers:
-  - image: ${YOUR_CONTENT_IMAGE}
+  - image: ${YOUR_CONTAINER_IMAGE}
     name: main
